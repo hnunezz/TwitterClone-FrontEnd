@@ -1,0 +1,12 @@
+section {
+  height: 100%;
+  display: flex;
+
+  & :first-child{
+    width: 30%;
+  }
+
+  & :last-child{
+    width: 70%;
+  }
+}
