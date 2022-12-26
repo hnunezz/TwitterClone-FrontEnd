@@ -19,12 +19,11 @@ export class TwitterHeaderComponent implements OnInit {
   }
 
   private getNavItems(): void {
-    const sourcePatter = 'assets/images/svg/twitter-header/nav';
-    const Items = ["Home", 'Explore',"Notifications", "Message","Bookmark","List","Profile","More"];
+    const sourcePattern = 'assets/images/svg/twitter-header/nav';
+    const Items = ["Home", 'Explore',"Notifications", "Messages","Bookmarks","List","Profile","More"];
 
     Items.forEach(item => {
-      this.navItems.push({label: item, source: `${sourcePatter}${item.toLowerCase}.svg`, action: true});
+      this.navItems.push({label: item, source: `${sourcePattern}/${item.toLowerCase()}.svg#${item}`, action: true});
     })
   }
-
 }
