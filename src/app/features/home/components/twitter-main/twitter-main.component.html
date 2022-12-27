@@ -24,6 +24,7 @@
     </div>
 
     <aside>
+      <div style="height: 75px;"></div>
       <div class="Trend-Topics">
         <ul>
           <li> What's happening </li>
@@ -45,6 +46,20 @@
       <div class="Who-To-Follow">
         <ul>
           <li> Who to follow </li>
+          <li *ngFor="let item of mockArray(3)">
+            <img width="48" height="48">
+
+            <div>
+              <div class="user">
+                <strong>{{WhoToFollow.name}}</strong>
+                <p>{{WhoToFollow.username}}</p>
+              </div>
+              <button>
+                <p>Follow</p>
+              </button>
+            </div>
+          </li>
+          <li> Show more </li>
         </ul>
       </div>
 

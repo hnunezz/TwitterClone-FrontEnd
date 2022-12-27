@@ -9,6 +9,7 @@ export class TwitterMainComponent implements OnInit {
 
   public TermsOfService: Array<string>;
   public WhatsHappening: any;
+  public WhoToFollow: any;
   public controlLayoutInput: boolean;
 
   constructor() {
@@ -20,6 +21,12 @@ export class TwitterMainComponent implements OnInit {
       title: "TypeScript & Angular",
       subtitle: "Trending with ",
       action: "Henrique Nunes"
+    };
+
+    this.WhoToFollow = {
+      source: "img",
+      name: "UserName",
+      username: "@UserName",
     };
 
     this.controlLayoutInput = false;
