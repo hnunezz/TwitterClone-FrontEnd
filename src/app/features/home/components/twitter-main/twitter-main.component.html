@@ -8,9 +8,14 @@
         </div>
       </div>
 
-      <div>
-        icon
-        <input type="text">
+      <div class="Search" [attr.controlLayoutInput]="controlLayoutInput">
+        <svg><use fill="#FFF" xlink:href="assets/images/svg/twitter-main/search.svg#search"/></svg>
+        <input
+          type="text"
+          placeholder="Search Twitter"
+          (focus)="controlLayoutInput = !controlLayoutInput"
+          (focusout)="controlLayoutInput = false"
+        />
       </div>
     </nav>
 
@@ -22,6 +27,18 @@
       <div class="Trend-Topics">
         <ul>
           <li> What's happening </li>
+          <li *ngFor="let item of mockArray(5)">
+            <p>
+              {{WhatsHappening.trending}}
+                <svg><use fill="#FFF" xlink:href="assets/images/svg/twitter-header/footer/dots.svg#user_dots"/></svg>
+            </p>
+            <p>{{WhatsHappening.title}}</p>
+            <div>
+              <p>{{WhatsHappening.subtitle}}</p>
+              <a>{{WhatsHappening.action}}</a>
+            </div>
+          </li>
+          <li> Show more </li>
         </ul>
       </div>
 

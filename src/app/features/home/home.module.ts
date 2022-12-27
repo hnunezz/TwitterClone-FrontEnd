@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { TwitterMainComponent } from './components/twitter-main/twitter-main.component';
 import { TwitterHeaderComponent } from './components/twitter-header/twitter-header.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { TwitterHeaderComponent } from './components/twitter-header/twitter-head
   imports: [
     CommonModule,
     HomeRoutingModule,
+    FormsModule
   ],
   exports: [
     TwitterMainComponent,
