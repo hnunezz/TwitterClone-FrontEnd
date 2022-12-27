@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwitterMainComponent implements OnInit {
 
-  constructor() { }
+  public TermsOfService: Array<string>;
+
+  constructor() {
+    this.TermsOfService = ['Terms of Service', "Privacy Policy", "Cookie Policy",
+    "Accessibility", "Ads info", "More ...", "© 2022 Twitter, Inc."];
+  }
 
   ngOnInit(): void {
   }

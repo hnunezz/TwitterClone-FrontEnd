@@ -1,1 +1,37 @@
-<p>twitter-main works!</p>
+<main>
+  <section>
+    <nav>
+      <p>
+        <strong>Home</strong>
+        <svg><use fill="#FFF" xlink:href="assets/images/svg/twitter-main/top-tweets.svg#top_tweets"/></svg>
+      </p>
+      <div>
+        icon
+        <input type="text">
+      </div>
+    </nav>
+    <div class="Feed">
+      <p></p>
+    </div>
+
+    <aside>
+      <div class="Trend-Topics">
+        <ul>
+          <li> What's happening </li>
+        </ul>
+      </div>
+
+      <div class="Who-To-Follow">
+        <ul>
+          <li> Who to follow </li>
+        </ul>
+      </div>
+
+      <div class="Terms-Of-Service">
+        <p *ngFor="let terms of TermsOfService">
+            {{terms}}
+        </p>
+      </div>
+    </aside>
+  </section>
+</main>

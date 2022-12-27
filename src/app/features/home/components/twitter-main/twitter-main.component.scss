@@ -1,0 +1,108 @@
+main {
+  width: 100%;
+  height: 100%;
+  section {
+    width: 990px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+    nav {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 16px;
+      padding-right: 16px;
+      width: 990px;
+      height: 53px;
+
+      p {
+        width: 660px;
+        font-size: 20px;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .Feed {
+      width: 660px;
+      max-width: 660px;
+      border-right: 1px solid #2f3336;
+    }
+
+    aside {
+      width: 350px;
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .Trend-Topics {
+        margin-bottom: 16px;
+        background-color: #16181c;
+        border-radius: 16px;
+        height: 480px;
+
+        ul {
+          li {
+            &:first-child {
+              font-size: 20px;
+              color: #e7e9ea;
+              padding: 12px 16px;
+              font-weight: 800;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+
+      .Who-To-Follow {
+        margin-bottom: 16px;
+        background-color: #16181c;
+        border-radius: 16px;
+        height: 336px;
+
+        ul {
+          li {
+            &:first-child {
+              font-size: 20px;
+              color: #e7e9ea;
+              padding: 12px 16px;
+              font-weight: 800;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+
+      .Terms-Of-Service {
+        height: 60px;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+        padding-left: 16px;
+        padding-right: 16px;
+        flex-direction: row;
+        display: flex;
+
+        p {
+          color: rgb(113, 118, 123);
+          padding-right: 12px;
+          font-size: 13px;
+          cursor: pointer;
+          line-height: 16px;
+          font-weight: 400;
+          font-family: TwitterChirp, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
