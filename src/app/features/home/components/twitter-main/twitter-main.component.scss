@@ -12,19 +12,43 @@ main {
       position: absolute;
       display: flex;
       justify-content: space-between;
-      padding-left: 16px;
-      padding-right: 16px;
       width: 990px;
       height: 53px;
+      gap: 50px;
 
-      p {
+      .Feed-Title {
         width: 660px;
         font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 16px;
 
-        svg {
-          width: 20px;
-          height: 20px;
+        div {
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          &:hover {
+            background: #181818b8;
+            border-radius: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+          }
         }
+      }
+
+      div {
+        width: 350px;
       }
     }
 
