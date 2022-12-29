@@ -1,127 +1,137 @@
-section {
+main {
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 275px;
-  justify-content: space-between;
-  float: right;
-  border-right: 1px solid #2f3336;
-  padding-left: 12px;
-  padding-right: 12px;
+  width: 100%;
+  justify-content: flex-end;
 
-  nav {
+  section {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    height: 100%;
+    width: 275px;
+    justify-content: space-between;
+    float: right;
+    border-right: 1px solid #2f3336;
+    padding-left: 12px;
+    padding-right: 12px;
 
-    ul {
-      li {
-        display: flex;
-        align-items: center;
-        gap: 16px;
+    position: fixed;
+    max-height: 100%;
+    top: 0;
 
-        &:first-child {
-          padding: 12px 0;
-          &:hover {
-            background: #062132;
-            border-radius: 70px;
-            width: min-content;
-            cursor: pointer;
-          }
-        }
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
 
-        &:not(:first-child) {
-          padding: 12px;
-          svg {
-            width: 26px;
-            height: 26px;
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          gap: 16px;
 
-            use {
-              fill: white !important;
+          &:first-child {
+            padding: 12px 0;
+            &:hover {
+              background: #062132;
+              border-radius: 70px;
+              width: min-content;
+              cursor: pointer;
             }
           }
 
-          p {
-            font-size: 20px;
-          }
+          &:not(:first-child) {
+            padding: 12px;
+            svg {
+              width: 26px;
+              height: 26px;
 
-          &:hover {
-            background: #181818b8;
-            border-radius: 70px;
-            width: min-content;
-            cursor: pointer;
+              use {
+                fill: white !important;
+              }
+            }
+
+            p {
+              font-size: 20px;
+            }
+
+            &:hover {
+              background: #181818b8;
+              border-radius: 70px;
+              width: min-content;
+              cursor: pointer;
+            }
           }
+        }
+      }
+
+      button {
+        width: 100%;
+        height: 52px;
+        background-color: rgb(29, 155, 240);
+        padding: 0 32px;
+        margin: 4px 0;
+        border-radius: 150px;
+
+        p {
+          font-size: 17px;
+          color: white;
+          font-weight: bold;
+        }
+
+        &:hover {
+          background-color: rgb(26, 140, 216);
+          cursor: pointer;
         }
       }
     }
 
-    button {
-      width: 100%;
-      height: 52px;
-      background-color: rgb(29, 155, 240);
-      padding: 0 32px;
-      margin: 4px 0;
-      border-radius: 150px;
+    footer {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      margin-top: 12px;
+      height: 64px;
+      padding: 0 12px;
+      align-items: center;
 
-      p {
-        font-size: 17px;
-        color: white;
-        font-weight: bold;
+      div {
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+
+        &:first-child {
+          display: flex;
+          gap: 12px;
+
+          div {
+            width: 40px;
+            height: 40px;
+            background: #363636;
+            border-radius: 152px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          p {
+            display: flex;
+            flex-direction: column;
+            font-size: 15px;
+            color: #71767b;
+
+            strong {
+              color: white;
+            }
+          }
+        }
       }
 
       &:hover {
-        background-color: rgb(26, 140, 216);
+        border-radius: 70px;
         cursor: pointer;
+        background: #181818b8;
       }
-    }
-  }
-
-  footer {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 12px;
-    margin-top: 12px;
-    height: 64px;
-    padding: 0 12px;
-    align-items: center;
-
-    div {
-      svg {
-        width: 20px;
-        height: 20px;
-      }
-
-      &:first-child {
-        display: flex;
-        gap: 12px;
-
-        div {
-          width: 40px;
-          height: 40px;
-          background: #363636;
-          border-radius: 152px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        p {
-          display: flex;
-          flex-direction: column;
-          font-size: 15px;
-          color: #71767b;
-
-          strong {
-            color: white;
-          }
-        }
-      }
-    }
-
-    &:hover {
-      border-radius: 70px;
-      cursor: pointer;
-      background: #181818b8;
     }
   }
 }

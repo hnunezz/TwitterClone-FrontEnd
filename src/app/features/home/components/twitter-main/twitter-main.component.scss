@@ -107,12 +107,12 @@ main {
     }
 
     aside {
+      min-height: 1105.5px;
       margin-top: 70px;
       width: 350px;
       max-width: 350px;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
 
       .Trend-Topics {
         margin-bottom: 16px;

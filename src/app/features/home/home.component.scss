@@ -1,12 +1,6 @@
 section {
-  height: 100%;
-  display: flex;
-
-  & :first-child{
-    width: 30%;
-  }
-
-  & :last-child{
-    width: 70%;
-  }
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". .";
 }
