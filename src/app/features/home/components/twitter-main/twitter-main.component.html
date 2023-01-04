@@ -1,72 +1,16 @@
 <main>
   <section>
-    <nav>
-      <div class="Feed-Title">
-        <strong>Home</strong>
-        <div>
-          <svg><use fill="#FFF" xlink:href="assets/images/svg/twitter-main/top-tweets.svg#top_tweets"/></svg>
-        </div>
+    <div class="Feed-Title">
+      <strong>Home</strong>
+      <div>
+        <svg><use fill="#FFF" xlink:href="assets/images/svg/twitter-main/top-tweets.svg#top_tweets"/></svg>
       </div>
-
-      <div class="Search" [attr.controlLayoutInput]="controlLayoutInput">
-        <svg><use fill="#FFF" xlink:href="assets/images/svg/twitter-main/search.svg#search"/></svg>
-        <input
-          type="text"
-          placeholder="Search Twitter"
-          (focus)="controlLayoutInput = !controlLayoutInput"
-          (focusout)="controlLayoutInput = false"
-        />
-      </div>
-    </nav>
+    </div>
 
     <div class="Feed">
       <p></p>
     </div>
 
-    <aside>
-      <div class="Trend-Topics">
-        <ul>
-          <li> What's happening </li>
-          <li *ngFor="let item of mockArray(5)">
-            <p>
-              {{WhatsHappening.trending}}
-                <svg><use fill="#FFF" xlink:href="assets/images/svg/twitter-header/footer/dots.svg#user_dots"/></svg>
-            </p>
-            <p>{{WhatsHappening.title}}</p>
-            <div>
-              <p>{{WhatsHappening.subtitle}}</p>
-              <a>{{WhatsHappening.action}}</a>
-            </div>
-          </li>
-          <li> Show more </li>
-        </ul>
-      </div>
-
-      <div class="Who-To-Follow">
-        <ul>
-          <li> Who to follow </li>
-          <li *ngFor="let item of mockArray(3)">
-            <img width="48" height="48">
-
-            <div>
-              <div class="user">
-                <strong>{{WhoToFollow.name}}</strong>
-                <p>{{WhoToFollow.username}}</p>
-              </div>
-              <button>
-                <p>Follow</p>
-              </button>
-            </div>
-          </li>
-          <li> Show more </li>
-        </ul>
-      </div>
-
-      <div class="Terms-Of-Service">
-        <p *ngFor="let terms of TermsOfService">
-            {{terms}}
-        </p>
-      </div>
-    </aside>
+    <app-trending></app-trending>
   </section>
 </main>

@@ -5,21 +5,23 @@ import { HomeRoutingModule } from './home-routing.module';
 import { TwitterMainComponent } from './components/twitter-main/twitter-main.component';
 import { TwitterHeaderComponent } from './components/twitter-header/twitter-header.component';
 import { FormsModule } from '@angular/forms';
+import { TwitterMainModule } from './components/twitter-main/twitter-main.module';
+import { TwitterHeaderModule } from './components/twitter-header/twitter-header.module';
 
 
 @NgModule({
   declarations: [
-    TwitterMainComponent,
-    TwitterHeaderComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    FormsModule
+    FormsModule,
+    TwitterMainModule,
+    TwitterHeaderModule
   ],
   exports: [
-    TwitterMainComponent,
-    TwitterHeaderComponent
+    TwitterMainModule,
+    TwitterHeaderModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

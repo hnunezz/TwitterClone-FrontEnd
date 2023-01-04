@@ -1,101 +1,43 @@
 main {
   width: 100%;
   height: 100%;
+
   section {
-    width: 990px;
+    width: 1050px;
     height: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 50px;
 
-    nav {
-      position: absolute;
+    .Feed-Title {
+      position: fixed;
+      height: 53px;
+      width: 659px;
+      font-size: 20px;
       display: flex;
       justify-content: space-between;
-      width: 990px;
-      height: 53px;
-      gap: 50px;
-      // background: black;
       align-items: center;
+      padding: 0 16px;
+      background-color: rgba(0, 0, 0, 0.65);
 
-      .Feed-Title {
-        width: 660px;
-        font-size: 20px;
+      div {
+        width: 40px;
+        height: 40px;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 16px;
-
-        div {
-          width: 40px;
-          height: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          svg {
-            width: 20px;
-            height: 20px;
-          }
-
-          &:hover {
-            background: #181818b8;
-            border-radius: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-          }
-        }
-      }
-
-      .Search {
-        display: flex;
-        align-items: center;
         justify-content: center;
-        width: 350px;
-        background: #202327;
-        border-radius: 300px;
-        display: flex;
-        height: 42px;
+        align-items: center;
 
         svg {
-          width: 44px;
+          width: 20px;
           height: 20px;
-          padding-left: 12px;
-
-          use {
-            fill: rgb(113, 118, 123);
-          }
         }
 
-        input {
-          background: #ff000000;
-          outline-style: none;
-          height: 100%;
-          width: 100%;
-          padding: 12px;
-          appearance: none;
-          border: 0;
-          color: white;
-
-          &::placeholder {
-            font-size: 15px !important;
-            font-weight: 400;
-            line-height: 20px;
-            color: rgb(113, 118, 123);
-          }
-        }
-
-        &[controlLayoutInput="true"] {
-          border: 1px solid rgb(29, 155, 204);
-          background-color: black;
-
-          svg {
-            use {
-              fill: rgb(29, 155, 204);
-            }
-          }
+        &:hover {
+          background: #181818b8;
+          border-radius: 70px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
         }
       }
     }
@@ -104,213 +46,6 @@ main {
       width: 660px;
       max-width: 660px;
       border-right: 1px solid #2f3336;
-    }
-
-    aside {
-      min-height: 1105.5px;
-      margin-top: 70px;
-      width: 350px;
-      max-width: 350px;
-      display: flex;
-      flex-direction: column;
-
-      .Trend-Topics {
-        margin-bottom: 16px;
-        background-color: #16181c;
-        border-radius: 16px;
-        height: 520px;
-
-        ul {
-          li {
-            height: 82px;
-            padding-bottom: 12px;
-            padding-top: 12px;
-            padding-left: 16px;
-            padding-right: 16px;
-
-            &:first-child {
-              height: 48px;
-              font-size: 20px;
-              color: #e7e9ea;
-              padding: 12px 16px;
-              font-weight: 800;
-              line-height: 24px;
-            }
-            &:last-child {
-              padding: 16px;
-              font-size: 15px;
-              color: #e7e9ea;
-              height: 52px;
-              line-height: 24px;
-              color: rgb(29, 155, 240);
-            }
-
-            &:not(:first-child):hover {
-              background-color: rgba(255, 255, 255, 0.03);
-              cursor: pointer;
-            }
-
-            p {
-              color: #71767b;
-              font-size: 13px;
-              height: 20px;
-
-              &:first-child {
-                display: flex;
-                justify-content: space-between;
-
-                svg {
-                  width: 19px;
-                  height: 19px;
-
-                  use {
-                    fill: rgb(113, 118, 123);
-                  }
-
-                  &:hover {
-                    background-color: rgb(29, 155, 240, 0.1);
-                    border-radius: 99999px;
-
-                    use {
-                      fill: rgb(29, 155, 240);
-                    }
-                  }
-                }
-              }
-
-              &:nth-child(2) {
-                color: #e7e9ea;
-                font-size: 15px;
-                font-weight: 700;
-              }
-            }
-
-            div {
-              display: flex;
-              align-items: center;
-              gap: 4px;
-
-              a {
-                font-size: 13px;
-                color: rgb(29, 155, 240);
-
-                &:hover {
-                  text-decoration: underline;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .Who-To-Follow {
-        margin-bottom: 16px;
-        background-color: #16181c;
-        border-radius: 16px;
-        height: 336px;
-
-        ul {
-          li {
-            display: flex;
-            padding: 12px 16px;
-            gap: 10px;
-
-            img {
-              border-radius: 999px;
-              background-color: rgb(150, 150, 150);
-            }
-            div {
-              display: flex;
-              justify-content: space-between;
-              width: 100%;
-
-              .user {
-                display: flex;
-                flex-direction: column;
-                justify-content: initial;
-
-                p {
-                  display: flex;
-                  flex-direction: column;
-                  font-size: 15px;
-                  color: #71767b;
-                }
-
-                strong {
-                  color: white;
-                }
-              }
-
-              button {
-                width: 77px;
-                height: 32px;
-                background-color:#EFF3F4;
-                padding: 0 16px;
-                border-radius: 150px;
-
-                p {
-                  font-size: 14px;
-                  color: #0F1419;
-                  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-                  font-weight: 600;
-                }
-
-                &:hover {
-                  background-color: rgb(215, 219, 220);
-                  cursor: pointer;
-                }
-              }
-            }
-
-            &:first-child {
-              font-size: 20px;
-              color: #e7e9ea;
-              padding: 12px 16px;
-              font-weight: 800;
-              line-height: 24px;
-            }
-
-            &:last-child {
-              padding: 16px;
-              font-size: 15px;
-              color: #e7e9ea;
-              height: 52px;
-              line-height: 24px;
-              color: rgb(29, 155, 240);
-            }
-
-            &:not(:first-child):hover {
-              background-color: rgba(255, 255, 255, 0.03);
-              cursor: pointer;
-            }
-          }
-        }
-      }
-
-      .Terms-Of-Service {
-        height: 60px;
-        margin-bottom: 16px;
-        flex-wrap: wrap;
-        padding-left: 16px;
-        padding-right: 16px;
-        flex-direction: row;
-        display: flex;
-
-        p {
-          color: rgb(113, 118, 123);
-          padding-right: 12px;
-          font-size: 13px;
-          cursor: pointer;
-          line-height: 16px;
-          font-weight: 400;
-          font-family: TwitterChirp, -apple-system, BlinkMacSystemFont,
-            "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
     }
   }
 }
