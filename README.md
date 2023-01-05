@@ -1,9 +1,6 @@
 
 # Twitter-FrontEnd-Clone
 
-This project refers to a clone of the layout and some features of twitter.
-
-
 ## Reference
 
  - [Twitter](https://twitter.com/home?lang=pt)
