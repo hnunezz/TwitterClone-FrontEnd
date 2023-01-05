@@ -13,17 +13,12 @@ This project refers to a clone of the layout and some features of twitter.
 **Front-end:** Angular, TypeScript, HTML & SCSS
 
 
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-
 ## Run App
 
 Clone Project
 
 ```bash
-  git clone https://link-para-o-projeto
+  git clone https://github.com/hnunezz/TwitterClone-FrontEnd.git
 ```
 
 ```bash
@@ -44,4 +39,8 @@ Start Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
-## Development server
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
