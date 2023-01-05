@@ -1,0 +1,57 @@
+button {
+  &.btn-primary {
+    background-color: rgb(29, 155, 240);
+    border-radius: 150px;
+
+    &.btn-xl {
+      width: 250px;
+      height: 52px;
+      padding: 0 32px;
+      margin: 4px 0;
+
+      p {
+        font-size: 17px;
+      }
+    }
+
+    &.btn-xs {
+      width: 76px;
+      height: 36px;
+      padding: 0 16px;
+      margin: 0 0 0 12px;
+
+      p {
+        font-size: 15px;
+      }
+    }
+
+    > p {
+      color: white;
+      font-weight: bold;
+    }
+
+    &:hover {
+      background-color: rgb(26, 140, 216);
+      cursor: pointer;
+    }
+  }
+
+  &.btn-secondary {
+    width: 77px;
+    height: 32px;
+    background-color: #eff3f4;
+    padding: 0 16px;
+    border-radius: 150px;
+
+    p {
+      font-size: 14px;
+      color: #0f1419;
+      font-weight: 600;
+    }
+
+    &:hover {
+      background-color: rgb(215, 219, 220);
+      cursor: pointer;
+    }
+  }
+}

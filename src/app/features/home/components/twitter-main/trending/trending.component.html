@@ -1,6 +1,6 @@
 <div class="Search-Container">
   <div class="Search-Input" [attr.controlLayoutInput]="controlLayoutInput">
-    <svg><use fill="#FFF" xlink:href="assets/images/svg/twitter-main/search.svg#search"/></svg>
+    <svg><use class="primary" xlink:href="assets/images/svg/twitter-main/search.svg#search"/></svg>
     <input
     type="text"
     placeholder="Search Twitter"
@@ -22,7 +22,7 @@
         <p>{{WhatsHappening.title}}</p>
         <div>
           <p>{{WhatsHappening.subtitle}}</p>
-          <a>{{WhatsHappening.action}}</a>
+          <a class="primary">{{WhatsHappening.action}}</a>
         </div>
       </li>
       <li> Show more </li>
@@ -33,19 +33,18 @@
     <ul>
       <li> Who to follow </li>
       <li *ngFor="let item of mockArray(3)">
-        <img width="48" height="48">
+        <img width="48" height="48" src="assets/images/yin-yang.png">
 
         <div>
           <div class="user">
             <strong>{{WhoToFollow.name}}</strong>
             <p>{{WhoToFollow.username}}</p>
           </div>
-          <button>
+          <button class="btn-secondary">
             <p>Follow</p>
           </button>
         </div>
       </li>
-      <!-- <li> Show more </li> -->
     </ul>
   </div>
 

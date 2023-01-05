@@ -107,10 +107,6 @@ main {
                 svg {
                   width: 20px;
                   height: 20px;
-
-                  use {
-                    fill: rgb(29, 155, 240);
-                  }
                 }
 
                 &:hover {
@@ -118,26 +114,6 @@ main {
                   border-radius: 150px;
                   cursor: pointer;
                 }
-              }
-            }
-
-            button {
-              width: 76px;
-              height: 36px;
-              background-color: rgb(29, 155, 240);
-              padding: 0 16px;
-              margin: 0 0 0 12px;
-              border-radius: 150px;
-
-              p {
-                font-size: 15px;
-                color: white;
-                font-weight: bold;
-              }
-
-              &:hover {
-                background-color: rgb(26, 140, 216);
-                cursor: pointer;
               }
             }
           }
@@ -151,8 +127,6 @@ main {
         height: 49px;
 
         color: rgb(29, 155, 240);
-        font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, Helvetica, Arial, sans-serif;
         font-size: 15px;
         font-weight: 400;
 

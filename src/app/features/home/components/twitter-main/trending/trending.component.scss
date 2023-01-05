@@ -45,18 +45,11 @@
     &[controlLayoutInput="true"] {
       border: 1px solid rgb(29, 155, 204);
       background-color: black;
-
-      svg {
-        use {
-          fill: rgb(29, 155, 204);
-        }
-      }
     }
   }
 }
 aside {
   min-height: 1105.5px;
-  // width: 350px;
   margin-top: 70px;
   max-width: 350px;
   display: flex;
@@ -145,7 +138,6 @@ aside {
 
           a {
             font-size: 13px;
-            color: rgb(29, 155, 240);
 
             &:hover {
               text-decoration: underline;
@@ -194,26 +186,6 @@ aside {
             }
           }
 
-          button {
-            width: 77px;
-            height: 32px;
-            background-color: #eff3f4;
-            padding: 0 16px;
-            border-radius: 150px;
-
-            p {
-              font-size: 14px;
-              color: #0f1419;
-              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                Helvetica, Arial, sans-serif;
-              font-weight: 600;
-            }
-
-            &:hover {
-              background-color: rgb(215, 219, 220);
-              cursor: pointer;
-            }
-          }
         }
 
         &:first-child {
@@ -252,8 +224,6 @@ aside {
       cursor: pointer;
       line-height: 16px;
       font-weight: 400;
-      font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Helvetica, Arial, sans-serif;
 
       &:hover {
         text-decoration: underline;

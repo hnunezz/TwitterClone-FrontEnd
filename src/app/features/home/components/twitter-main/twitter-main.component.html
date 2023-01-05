@@ -20,11 +20,11 @@
           <aside>
             <ul>
               <li *ngFor="let items of actionItems">
-                <svg><use [attr.xlink:href]="items"/></svg>
+                <svg><use class="primary" [attr.xlink:href]="items"/></svg>
               </li>
             </ul>
 
-            <button>
+            <button class="btn-primary btn-xs">
               <p>Tweet</p>
             </button>
           </aside>
