@@ -7,17 +7,40 @@
   </div>
 
   <div class="Feed">
-    <section class="Whats-Happening">
-      <div>
-        <p>user</p>
+    <section class="Timeline-newTweet">
+      <div style="height: 53px;"></div>
+
+      <div class="section-actions">
+        <figure>
+          <img width="48" height="48" src="assets/images/yin-yang.png">
+        </figure>
+
+        <div class="section-new-tweets">
+          <input type="text" placeholder="What's happening?">
+          <aside>
+            <ul>
+              <li *ngFor="let items of actionItems">
+                <svg><use [attr.xlink:href]="items"/></svg>
+              </li>
+            </ul>
+
+            <button>
+              <p>Tweet</p>
+            </button>
+          </aside>
+        </div>
       </div>
 
-      <div>
+      <div class="section-loading-more-tweets">
         Show XX Tweets
       </div>
     </section>
+
+    <section class="TimeLine">
+      <twitter-timeline></twitter-timeline>
+    </section>
   </div>
 
-  <app-trending></app-trending>
+  <trending></trending>
 </main>
 
