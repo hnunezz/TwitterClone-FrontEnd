@@ -39,6 +39,11 @@ Start Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
+## Screenshots
+
+//Development
+
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
