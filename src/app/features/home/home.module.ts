@@ -1,12 +1,11 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { HomeRoutingModule } from './home-routing.module';
-import { TwitterMainComponent } from './components/twitter-main/twitter-main.component';
-import { TwitterHeaderComponent } from './components/twitter-header/twitter-header.component';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TwitterMainModule } from './components/twitter-main/twitter-main.module';
+
+import { SharedModule } from 'src/app/shared/shared.module';
 import { TwitterHeaderModule } from './components/twitter-header/twitter-header.module';
+import { TwitterMainModule } from './components/twitter-main/twitter-main.module';
+import { HomeRoutingModule } from './home-routing.module';
 
 
 @NgModule({
@@ -17,11 +16,11 @@ import { TwitterHeaderModule } from './components/twitter-header/twitter-header.
     HomeRoutingModule,
     FormsModule,
     TwitterMainModule,
-    TwitterHeaderModule
+    TwitterHeaderModule,
   ],
   exports: [
     TwitterMainModule,
-    TwitterHeaderModule
+    TwitterHeaderModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

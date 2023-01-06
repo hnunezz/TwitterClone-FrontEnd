@@ -7,6 +7,8 @@ import { TwitterHeaderComponent } from './features/home/components/twitter-heade
 import { TwitterMainComponent } from './features/home/components/twitter-main/twitter-main.component';
 import { HomeComponent } from './features/home/home.component';
 import { HomeModule } from './features/home/home.module';
+import { TwitterButtonComponent } from './shared/components/twitter-button/twitter-button.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,11 @@ import { HomeModule } from './features/home/home.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    SharedModule
+  ],
+  exports: [
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],
