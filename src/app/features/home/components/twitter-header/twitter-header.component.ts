@@ -7,16 +7,11 @@ import { NavItems } from 'src/app/core/models/nav-items.models';
   styleUrls: ['./twitter-header.component.scss']
 })
 export class TwitterHeaderComponent implements OnInit {
-
   public navItems: Array<NavItems>;
 
-  constructor() {
-    this.navItems = new Array<NavItems>();
-  }
+  constructor() { this.navItems = new Array<NavItems>(); }
 
-  ngOnInit(): void {
-    this.getNavItems();
-  }
+  ngOnInit(): void { this.getNavItems(); }
 
   private getNavItems(): void {
     const sourcePattern = 'assets/images/svg/twitter-header/nav';

@@ -6,18 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./twitter-main.component.scss']
 })
 export class TwitterMainComponent implements OnInit {
-
   public actionItems: Array<string>;
 
-  constructor() {
-    this.actionItems = new Array<string>();
-  }
+  constructor() { this.actionItems = new Array<string>(); }
 
-  ngOnInit() {
-    this.setActionItems();
-  }
+  ngOnInit() { this.setActionItems(); }
 
-  private setActionItems() : void {
+  private setActionItems(): void {
     const sourcePattern = 'assets/images/svg/twitter-main/actions';
     const Items = ['new-img', 'new-gif', 'new-topic','new-emote', 'new-calendar', 'location'];
 

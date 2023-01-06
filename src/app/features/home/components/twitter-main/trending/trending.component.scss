@@ -1,11 +1,11 @@
-.Search-Container {
+section {
   height: 53px;
   background-color: black;
   display: flex;
   align-items: center;
   position: fixed;
 
-  .Search-Input {
+  div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,7 +169,7 @@ aside {
           justify-content: space-between;
           width: 100%;
 
-          .user {
+          label {
             display: flex;
             flex-direction: column;
             justify-content: initial;
@@ -208,7 +208,7 @@ aside {
     }
   }
 
-  .Terms-Of-Service {
+  > label {
     height: 60px;
     margin-bottom: 16px;
     flex-wrap: wrap;

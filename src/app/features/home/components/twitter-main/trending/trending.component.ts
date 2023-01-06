@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'trending',
@@ -9,8 +9,6 @@ export class TrendingComponent {
   public TermsOfService: Array<string>;
   public WhatsHappening: any;
   public WhoToFollow: any;
-
-
   public controlLayoutInput: boolean;
 
   constructor() {
@@ -29,7 +27,6 @@ export class TrendingComponent {
       name: "UserName",
       username: "@UserName",
     };
-
 
     this.controlLayoutInput = false;
   }

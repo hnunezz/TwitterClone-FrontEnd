@@ -1,33 +1,31 @@
 <main>
   <section>
     <nav>
-    <ul>
-      <li>
-        <svg style="width: 50px;height: 30px;"><use fill= "#FFF" xlink:href="assets/images/svg/twitter-logo.svg#twitter_logo"/></svg>
-      </li>
-      <li *ngFor="let items of navItems">
-        <svg><use [attr.xlink:href]="items.source"/></svg>
-        <p>{{items.label}}</p>
-      </li>
-    </ul>
+      <ul>
+        <li>
+          <svg style="width: 50px;height: 30px;">
+            <use fill= "#FFF" xlink:href="assets/images/svg/twitter-logo.svg#twitter_logo"/>
+          </svg>
+        </li>
 
-    <twitter-button size="xl"></twitter-button>
-  </nav>
+        <li *ngFor="let items of navItems">
+          <svg>
+            <use [attr.xlink:href]="items.source"/>
+          </svg>
+          <p>{{ items.label }}</p>
+        </li>
+      </ul>
 
-  <footer>
-    <div>
+      <twitter-button size="xl"></twitter-button>
+    </nav>
+
+    <footer>
       <div>
-        <img width="40" height="40" src="assets/images/yin-yang.png">
+        <picture><img width="40" height="40" src="assets/images/yin-yang.png"></picture>
+        <p><strong> UserName </strong> @UserName </p>
       </div>
-      <p>
-        <strong>UserName</strong>
-        @UserName
-      </p>
-    </div>
 
-    <div>
       <svg><use fill="#FFF" xlink:href="assets/images/svg/twitter-header/footer/dots.svg#user_dots"/></svg>
-    </div>
-  </footer>
-</section>
+    </footer>
+  </section>
 </main>

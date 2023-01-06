@@ -3,7 +3,7 @@ export class NavItems {
   public source: string;
   public action: any;
 
-  constructor(){
+  constructor() {
     this.label = "";
     this.source = "";
   };

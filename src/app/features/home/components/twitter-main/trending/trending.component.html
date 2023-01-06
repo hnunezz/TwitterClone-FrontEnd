@@ -1,30 +1,33 @@
-<div class="Search-Container">
-  <div class="Search-Input" [attr.controlLayoutInput]="controlLayoutInput">
+<section>
+  <div [attr.controlLayoutInput]="controlLayoutInput">
     <svg><use class="primary" xlink:href="assets/images/svg/twitter-main/search.svg#search"/></svg>
+
     <input
-    type="text"
-    placeholder="Search Twitter"
-    (focus)="controlLayoutInput = !controlLayoutInput"
-    (focusout)="controlLayoutInput = false"
+      type="text"
+      placeholder="Search Twitter"
+      (focus)="controlLayoutInput = !controlLayoutInput"
+      (focusout)="controlLayoutInput = false"
     />
   </div>
-</div>
+</section>
 
 <aside>
   <div class="Trend-Topics">
     <ul>
       <li> What's happening </li>
+
       <li *ngFor="let item of mockArray(5)">
         <p>
-          {{WhatsHappening.trending}}
-            <svg><use fill="#FFF" xlink:href="assets/images/svg/twitter-header/footer/dots.svg#user_dots"/></svg>
+          {{ WhatsHappening.trending }}
+          <svg><use fill="#FFF" xlink:href="assets/images/svg/twitter-header/footer/dots.svg#user_dots"/></svg>
         </p>
-        <p>{{WhatsHappening.title}}</p>
+        <p>{{ WhatsHappening.title }}</p>
         <div>
-          <p>{{WhatsHappening.subtitle}}</p>
-          <a class="primary">{{WhatsHappening.action}}</a>
+          <p>{{ WhatsHappening.subtitle }}</p>
+          <a class="primary">{{ WhatsHappening.action }}</a>
         </div>
       </li>
+
       <li> Show more </li>
     </ul>
   </div>
@@ -36,19 +39,16 @@
         <img width="48" height="48" src="assets/images/yin-yang.png">
 
         <div>
-          <div class="user">
-            <strong>{{WhoToFollow.name}}</strong>
-            <p>{{WhoToFollow.username}}</p>
-          </div>
+          <label>
+            <strong>{{ WhoToFollow.name }}</strong>
+            <p>{{ WhoToFollow.username }}</p>
+          </label>
+
           <twitter-button [label]="'Follow'" [color]="'secondary'"></twitter-button>
         </div>
       </li>
     </ul>
   </div>
 
-  <div class="Terms-Of-Service">
-    <p *ngFor="let terms of TermsOfService">
-        {{terms}}
-    </p>
-  </div>
+  <label><p *ngFor="let terms of TermsOfService">{{ terms }}</p></label>
 </aside>
