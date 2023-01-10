@@ -1,0 +1,44 @@
+<main>
+  <div class="utils"></div> <!--if even twitter uses it.. why can't I?-->
+
+  <div class="post">
+    <figure>
+      <img width="48" height="48" src="assets/images/yin-yang.png">
+    </figure>
+
+    <section>
+      <div class="post-username">
+        <label class="username-title">
+          <strong>UserName</strong>
+          <div>
+            <p>@UserName</p>
+            ·
+            <p>10m</p>
+          </div>
+        </label>
+
+        <div>
+          <svg><use fill="#FFF" xlink:href="assets/images/svg/twitter-header/footer/dots.svg#user_dots"/></svg>
+        </div>
+      </div>
+
+      <div class="post-info">
+          <label class="tweet-label">
+            orem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's
+          </label>
+
+        <div class="tweet-actions">
+          <div>
+            <ng-container *ngFor="let items of actionItems">
+              <label [ngClass]="items.aux">
+                <svg><use class="primary" [attr.xlink:href]="items.source"/></svg>
+                <p>{{ items.label }}</p>
+              </label>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
