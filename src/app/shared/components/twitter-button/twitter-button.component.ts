@@ -10,6 +10,7 @@ export class TwitterButtonComponent {
   @Input() size: string = 'xs'; // || xl
   @Input() color: string = 'primary';
   @Input() label: string = 'Tweet';
+  @Input() disable: boolean = false;
 
   constructor() { }
 }

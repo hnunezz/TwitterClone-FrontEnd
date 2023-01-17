@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { SharedModule } from 'src/app/shared/shared.module';
 import { TrendingComponent } from './trending/trending.component';
@@ -16,7 +17,8 @@ import { TwitterTimelineComponent } from './twitter-timeline/twitter-timeline.co
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   exports: [
     TwitterMainComponent

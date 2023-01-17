@@ -16,7 +16,11 @@
         </figure>
 
         <div class="section-new-tweets">
-          <input type="text" placeholder="What's happening?">
+          <input
+            type="text"
+            placeholder="What's happening?"
+            [(ngModel)]="tweetText"
+          >
           <aside>
             <ul>
               <li *ngFor="let items of actionItems">
@@ -24,7 +28,7 @@
               </li>
             </ul>
 
-            <twitter-button></twitter-button>
+            <twitter-button [tweetText]="tweetText" [disable]="hasTweetText"></twitter-button>
           </aside>
         </div>
       </div>
