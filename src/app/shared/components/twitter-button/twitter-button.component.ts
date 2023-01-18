@@ -1,4 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Tweets } from 'src/app/core/models/tweets.models';
+import { TweetsService } from 'src/app/core/services/tweets.service';
 
 @Component({
   selector: 'twitter-button',
@@ -11,6 +13,16 @@ export class TwitterButtonComponent {
   @Input() color: string = 'primary';
   @Input() label: string = 'Tweet';
   @Input() disable: boolean = false;
+  @Input() tweetText: string = '';
 
-  constructor() { }
+  public tweetResult: Tweets = new Tweets();
+
+  constructor(private tweetService: TweetsService) {
+  }
+
+  public setTweets(): void {
+    this.tweetResult.text = this.tweetText;
+    this.tweetService.setTweets(this.tweetResult);
+    this.tweetResult = new Tweets();
+  }
 }

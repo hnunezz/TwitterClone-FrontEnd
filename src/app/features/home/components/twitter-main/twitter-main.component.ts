@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TweetsService } from 'src/app/core/services/tweets.service';
 
 
 @Component({
@@ -14,13 +15,17 @@ export class TwitterMainComponent implements OnInit {
     return this.tweetText == '';
   }
 
-  constructor() {
+  constructor(private tweetService: TweetsService) {
     this.actionItems = new Array<string>();
     this.tweetText = '';
-
   }
 
-  ngOnInit() { this.setActionItems(); }
+  ngOnInit() {
+    this.setActionItems();
+    this.tweetService.getTweets().subscribe(() => {
+      this.tweetText = '';
+    });
+  }
 
   private setActionItems(): void {
     const sourcePattern = 'assets/images/svg/twitter-main/actions';

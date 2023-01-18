@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NavItems } from 'src/app/core/models/nav-items.models';
+import { Tweets } from 'src/app/core/models/tweets.models';
 
 @Component({
   selector: 'app-tweet',
@@ -7,9 +8,14 @@ import { NavItems } from 'src/app/core/models/nav-items.models';
   styleUrls: ['./tweet.component.scss']
 })
 export class TweetComponent implements OnInit {
+  @Input() public tweet: Tweets;
+
   public actionItems: Array<NavItems>;
 
-  constructor() { this.actionItems = new Array<NavItems>(); }
+  constructor() {
+    this.actionItems = new Array<NavItems>();
+    this.tweet = new Tweets();
+  }
 
   ngOnInit(): void {
     this.getActionItems();

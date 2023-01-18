@@ -23,11 +23,7 @@
       </div>
 
       <div class="post-info">
-          <label class="tweet-label">
-            orem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's
-          </label>
-
+        <label class="tweet-label"> {{ tweet.text }} </label>
         <div class="tweet-actions">
           <div>
             <ng-container *ngFor="let items of actionItems">

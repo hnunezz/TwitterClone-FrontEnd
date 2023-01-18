@@ -1,6 +1,7 @@
 <button
   class="btn-{{ size }} btn-{{ color }}"
   [disabled]="disable"
+  (click)="setTweets()"
 >
   <p>{{ label }}</p>
 </button>

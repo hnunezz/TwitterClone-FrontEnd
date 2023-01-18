@@ -1,4 +1,7 @@
 
 <section>
-  <app-tweet></app-tweet>
+  <ng-containe *ngFor="let tweet of tweetList.reverse()">
+    <app-tweet [tweet]="tweet"></app-tweet>
+  </ng-containe>
 </section>
+{{tweetList}}
