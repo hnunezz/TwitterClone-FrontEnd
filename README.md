@@ -38,7 +38,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Screenshots
 
-//Development
+<a href="https://imgur.com/VNiIHDP"><img src="https://i.imgur.com/VNiIHDP.png" title="source: imgur.com" /></a>
 
 
 ## License
