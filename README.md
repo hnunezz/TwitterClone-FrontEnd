@@ -41,8 +41,3 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 <a href="https://imgur.com/VNiIHDP"><img src="https://i.imgur.com/VNiIHDP.png" title="source: imgur.com" /></a>
 
 
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-
