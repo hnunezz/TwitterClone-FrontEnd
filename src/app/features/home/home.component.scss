@@ -4,3 +4,10 @@ section {
   grid-template-rows: 1fr;
   grid-template-areas: ". .";
 }
+@media only screen and (max-width: 768px) {
+  section {
+    app-twitter-header {
+      display: none !important;
+    }
+  }
+}

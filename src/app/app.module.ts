@@ -9,17 +9,21 @@ import { HomeComponent } from './features/home/home.component';
 import { HomeModule } from './features/home/home.module';
 import { TwitterButtonComponent } from './shared/components/twitter-button/twitter-button.component';
 import { SharedModule } from './shared/shared.module';
+import { ConfigComponent } from './features/config/config.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    ConfigComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HomeModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   exports: [
     SharedModule

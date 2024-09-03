@@ -28,18 +28,18 @@
               </li>
             </ul>
 
-            <twitter-button [tweetText]="tweetText" [disable]="hasTweetText"></twitter-button>
+            <twitter-button [tweetText]="tweetText" [disable]="hasTweetText" (tweetChange)="handleTweets()"></twitter-button>
           </aside>
         </div>
       </div>
 
       <div class="section-loading-more-tweets">
-        Show XX Tweets
+        Show {{tweetsCount}} Tweets
       </div>
     </section>
 
     <section class="TimeLine">
-      <twitter-timeline></twitter-timeline>
+      <twitter-timeline (tweetsCount)="setTweetsQnt($event)"></twitter-timeline>
     </section>
   </div>
 

@@ -11,6 +11,8 @@ export class TweetComponent implements OnInit {
   @Input() public tweet: Tweets;
 
   public actionItems: Array<NavItems>;
+  public name: string = '';
+  public user: string = '';
 
   constructor() {
     this.actionItems = new Array<NavItems>();
@@ -19,6 +21,8 @@ export class TweetComponent implements OnInit {
 
   ngOnInit(): void {
     this.getActionItems();
+    this.name = localStorage.getItem("nome") as string;
+    this.user = `@${localStorage.getItem("user") as string}`;
   }
 
 

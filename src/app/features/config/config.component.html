@@ -1,0 +1,8 @@
+<main>
+    <section>
+      <input type="text" placeholder="Nome" [(ngModel)]="nome">
+      <input type="text" placeholder="User (@)" [(ngModel)]="user">
+
+      <twitter-button size="xl" label="Entrar" (tweetChange)="setForm()" [disable]="(nome == '' || user == '')"></twitter-button>
+    </section>
+</main>

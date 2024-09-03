@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Tweets } from 'src/app/core/models/tweets.models';
 import { TweetsService } from 'src/app/core/services/tweets.service';
 
@@ -15,14 +15,9 @@ export class TwitterButtonComponent {
   @Input() disable: boolean = false;
   @Input() tweetText: string = '';
 
-  public tweetResult: Tweets = new Tweets();
+  @Output() tweetChange = new EventEmitter();
 
-  constructor(private tweetService: TweetsService) {
-  }
-
-  public setTweets(): void {
-    this.tweetResult.text = this.tweetText;
-    this.tweetService.setTweets(this.tweetResult);
-    this.tweetResult = new Tweets();
+  handleTweets() {
+    this.tweetChange.emit('')
   }
 }

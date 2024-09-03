@@ -61,6 +61,7 @@ main {
         &.post-info {
           display: flex;
           flex-direction: column;
+          width: 250px;
 
           div.tweet-actions {
             height: 32px;

@@ -78,14 +78,14 @@ main {
             color: white;
             font-size: 19px;
 
-            &::placeholder{
-              color: #71767B;
+            &::placeholder {
+              color: #71767b;
               font-weight: 400;
               font-size: 19px;
-              font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+              font-family: TwitterChirp, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
               line-height: 24px;
             }
-
           }
 
           aside {
@@ -138,5 +138,15 @@ main {
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  trending {
+    display: none !important;
+  }
+
+  main {
+    width: auto !important;
   }
 }

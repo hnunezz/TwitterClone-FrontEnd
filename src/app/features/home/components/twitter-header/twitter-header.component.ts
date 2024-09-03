@@ -9,9 +9,16 @@ import { NavItems } from 'src/app/core/models/nav-items.models';
 export class TwitterHeaderComponent implements OnInit {
   public navItems: Array<NavItems>;
 
+  public name: string = '';
+  public user: string = '';
+
   constructor() { this.navItems = new Array<NavItems>(); }
 
-  ngOnInit(): void { this.getNavItems(); }
+  ngOnInit(): void {
+    this.getNavItems();
+    this.name = localStorage.getItem("nome") as string;
+    this.user = localStorage.getItem("user") as string;
+  }
 
   private getNavItems(): void {
     const sourcePattern = 'assets/images/svg/twitter-header/nav';

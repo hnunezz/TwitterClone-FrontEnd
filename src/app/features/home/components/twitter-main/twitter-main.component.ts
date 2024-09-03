@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Tweets } from 'src/app/core/models/tweets.models';
 import { TweetsService } from 'src/app/core/services/tweets.service';
 
 
@@ -10,6 +11,10 @@ import { TweetsService } from 'src/app/core/services/tweets.service';
 export class TwitterMainComponent implements OnInit {
   public actionItems: Array<string>;
   public tweetText: string;
+  public tweetsCount: number = 0;
+
+  public tweetResult: Tweets = new Tweets();
+
 
   public get hasTweetText(): boolean {
     return this.tweetText == '';
@@ -34,5 +39,15 @@ export class TwitterMainComponent implements OnInit {
     Items.forEach(item => {
       this.actionItems.push(`${sourcePattern}/${item.toLowerCase()}.svg#${item}`);
     })
+  }
+
+  handleTweets() {
+    this.tweetResult.text = this.tweetText;
+    this.tweetService.setTweets(this.tweetResult);
+    this.tweetResult = new Tweets();
+  }
+
+  setTweetsQnt(qnt:number) {
+    this.tweetsCount = qnt
   }
 }
